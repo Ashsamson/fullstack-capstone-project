@@ -47,13 +47,13 @@ function MainPage() {
                 {gifts.map((gift) => (
                     <div key={gift.id} className="col-md-4 mb-4">
                         <div className="card product-card">
-
-                        {gift.image ? (
-                                        <img src={gift.image} alt={gift.name} />
-                                    ) : (
-                                        <div className="no-image-available">No Image Available</div>
-                                    )}
-                                </div>
+             <div className="image-placeholder">
+             {gift.image ? (
+           <img src={gift.image} alt={gift.name} className="card-img-top" />
+            ) : (
+           <div className="no-image-available">No Image Available</div>
+         )}
+            </div>
 
                             <div className="card-body">
 
@@ -62,9 +62,9 @@ function MainPage() {
                                         {gift.condition}
                                     </p>
 
-                                <p className={`card-text ${getConditionClass(gift.condition)}`}>
-                                {gift.condition}
-                                </p>
+                                <p className="card-text date-added">
+                                        {formatDate(gift.date_added)}
+                                    </p>
 
                                 </div>
                                 <div className="card-footer">
