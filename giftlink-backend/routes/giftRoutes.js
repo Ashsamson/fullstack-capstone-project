@@ -8,10 +8,10 @@ const logger = require('../logger');
 router.get('/', async (req, res) => {
     try {
         // Task 1: Connect to MongoDB and store connection to db constant
-         const db = await connectToDatabase()
+         const db = await connectToDatabase();
 
         // Task 2: use the collection() method to retrieve the gift collection
-        const collection = db.collection("gift")
+        const collection = db.collection("gift");
 
         // Task 3: Fetch all gifts using the collection.find method. Chain with toArray method to convert to JSON array
          const gifts = await collection.find({}).toArray(); 
@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         // Task 1: Connect to MongoDB and store connection to db constant
-        const db = await connectToDatabase()
+        const db = await connectToDatabase();
 
         // Task 2: use the collection() method to retrieve the gift collection
         const collection = db.collection("gifts");
