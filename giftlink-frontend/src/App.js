@@ -8,7 +8,8 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import DetailsPage from './components/DetailsPage/DetailsPage';
 <Route path="/app/product/:productId" element={<DetailsPage/>} />
-
+import SearchPage from './components/SearchPage/SearchPage';
+<Route path="/app/search" element={<SearchPage/>} />
 function App() {
   const navigate = useNavigate();
   return (

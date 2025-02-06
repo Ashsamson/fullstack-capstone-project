@@ -32,7 +32,7 @@ function DetailsPage() {
                 setError(error.message);
             } finally {
                 setLoading(false);
-            }
+        }
         };
 
         fetchGift();
